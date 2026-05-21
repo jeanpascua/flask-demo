@@ -24,7 +24,7 @@ Every push to main triggers a GitHub Actions workflow that runs tests, security 
 4. Runs `pytest tests/`
 5. Runs Snyk dependency scan (fails on HIGH+ severity)
 6. Builds Docker image
-7. Runs Trivy container scan (fails on HIGH/CRITICAL)
+7. Runs Trivy container scan (fails on HIGH/CRITICAL) — `ignore-unfixed` skips CVEs with no available patch, so the pipeline only fails on actionable findings
 
 ---
 
